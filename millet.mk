@@ -84,5 +84,8 @@ PRODUCT_PACKAGES += \
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 ro.adb.secure=0 persist.sys.usb.config=mtp
 
+# Override build.prop
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=210
+
 # Inherit from qcom-common
 $(call inherit-product, device/samsung/msm8226-common/msm8226.mk)

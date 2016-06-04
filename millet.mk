@@ -25,10 +25,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8226
@@ -75,17 +71,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl \
     $(LOCAL_PATH)/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
 
-# ANT+
-PRODUCT_PACKAGES += \
-   AntHalService \
-   com.dsi.ant.antradio_library \
-   libantradio
 
-# Default Properties
-ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 ro.adb.secure=0 persist.sys.usb.config=mtp
-
-# Override build.prop
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=210
 
 # Inherit from qcom-common
 $(call inherit-product, device/samsung/msm8226-common/msm8226.mk)
